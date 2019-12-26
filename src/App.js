@@ -4,6 +4,7 @@ import "./App.css";
 
 import Nav from "./Nav";
 import Title from "./Title";
+import NewTask from "./NewTask";
 
 class App extends React.Component {
 	render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
 			<div>
 				<Title />
 				<Nav />
+				<NewTask />>
 			</div>
 		);
 	}

@@ -5,13 +5,11 @@ class Nav extends React.Component {
 		return (
 			<div>
 				<div className="container">
-					<div>
-						<nav className="navbar fixed-top navbar-expand-md">
-							<a className="navbar-brand" href="">
-								<h1>To Do List</h1>
-							</a>
-						</nav>
-					</div>
+					<nav className="navbar fixed-top navbar-expand-md">
+						<a className="navbar-brand" href="">
+							<h1>To Do List</h1>
+						</a>
+					</nav>
 				</div>
 			</div>
 		);
