@@ -6,15 +6,17 @@ import Nav from "./Nav";
 import Title from "./Title";
 import NewTask from "./NewTask";
 import Background from "./Background";
+import Total from "./Total";
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Background />
 				<Title />
+				<Background />
 				<Nav />
 				<NewTask />
+				<Total />
 			</div>
 		);
 	}
