@@ -1,6 +1,5 @@
 body {
-	background-color: #acb8c6;
-	padding-top: 150px;
+	padding-top: 60px;
 }
 
 .navbar {
@@ -25,7 +24,7 @@ h1 {
 }
 
 #newTask {
-	/* border: solid; */
+	padding-top: 50px;
 	margin-bottom: 30px;
 	align-items: center;
 }
