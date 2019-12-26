@@ -47,6 +47,10 @@ h1 {
 	background-color: #f77e90;
 }
 
+.btn-space {
+	margin-left: 10px;
+}
+
 #input {
 	font-family: courier, monospace;
 }
