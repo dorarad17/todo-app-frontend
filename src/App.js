@@ -7,7 +7,7 @@ import Title from "./components/Title";
 import NewTask from "./components/NewTask";
 import Background from "./components/Background";
 import Total from "./components/Total";
-import Task from "./components/Tasks";
+import Task from "./components/Task";
 
 class App extends React.Component {
 	render() {
@@ -18,9 +18,9 @@ class App extends React.Component {
 				<Nav />
 				<NewTask />
 				<Total />
-				<Task />
-				<Task />
-				<Task />
+				<Task item="Get milk" />
+				<Task item="Finish homework" />
+				<Task item="Do laundry" />
 			</div>
 		);
 	}

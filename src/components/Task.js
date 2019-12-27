@@ -6,7 +6,7 @@ class Task extends React.Component {
 			<div classNameName="container">
 				<div className="row item text-center">
 					<div className="col-12">
-						Task
+						{this.props.item}
 						<button type="button" className="btn btn-space btn-danger">
 							<i className="far fa-trash-alt"></i>
 						</button>
