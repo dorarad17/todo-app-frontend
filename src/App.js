@@ -10,6 +10,13 @@ import Total from "./components/Total";
 import Task from "./components/Task";
 
 class App extends React.Component {
+	state = {
+		tasks: [
+			{ id: 1, description: "Take meds", completed: false },
+			{ id: 2, description: "Clean kitchen", completed: false },
+			{ id: 3, description: "Cook dinner", completed: false }
+		]
+	};
 	render() {
 		return (
 			<div>
