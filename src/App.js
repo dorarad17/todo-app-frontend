@@ -7,7 +7,7 @@ import Title from "./components/Title";
 import NewTask from "./components/NewTask";
 import Background from "./components/Background";
 import Total from "./components/Total";
-import Task from "./components/Task";
+import TaskList from "./components/TaskList";
 
 class App extends React.Component {
 	state = {
@@ -25,9 +25,7 @@ class App extends React.Component {
 				<Nav />
 				<NewTask />
 				<Total taskTotal={this.state.tasks.length} />
-				<Task item="Get milk" />
-				<Task item="Finish homework" />
-				<Task item="Do laundry" />
+				<TaskList />
 			</div>
 		);
 	}
