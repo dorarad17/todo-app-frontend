@@ -7,7 +7,7 @@ class Total extends React.Component {
 				<div className="row text-center" id="total">
 					<div className="col-12">
 						<p>Things to do:</p>
-						<span id="number">3</span>
+						<span id="number">{this.props.taskTotal}</span>
 					</div>
 				</div>
 			</div>

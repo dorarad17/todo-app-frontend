@@ -24,7 +24,7 @@ class App extends React.Component {
 				<Background />
 				<Nav />
 				<NewTask />
-				<Total />
+				<Total taskTotal={this.state.tasks.length} />
 				<Task item="Get milk" />
 				<Task item="Finish homework" />
 				<Task item="Do laundry" />
