@@ -6,7 +6,7 @@ class TaskList extends React.Component {
 		return (
 			<div>
 				{this.props.taskCollection.map((taskItem) => (
-					<Task item={taskItem} />
+					<Task item={taskItem} deleteTaskFunc={this.props.deleteTaskFunc} />
 				))}
 			</div>
 		);

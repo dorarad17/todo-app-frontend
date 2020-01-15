@@ -17,6 +17,16 @@ class App extends React.Component {
 			{ id: 3, description: "Cook dinner", completed: false }
 		]
 	};
+
+	deleteTask = (taskId) => {
+		// Tasks will be deleted
+		const tasks = this.state.tasks;
+		const updatedTasks = tasks.filter((item) => item.id !== taskId);
+		this.setState({
+			tasks: updatedTasks
+		});
+	};
+
 	render() {
 		return (
 			<div>
@@ -25,7 +35,10 @@ class App extends React.Component {
 				<Nav />
 				<NewTask />
 				<Total taskTotal={this.state.tasks.length} />
-				<TaskList taskCollection={this.state.tasks} />
+				<TaskList
+					taskCollection={this.state.tasks}
+					deleteTaskFunc={this.deleteTask}
+				/>
 			</div>
 		);
 	}

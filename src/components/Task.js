@@ -2,11 +2,11 @@ import React from "react";
 
 class Task extends React.Component {
 	deleteClicked = () => {
-		alert("What to delete?");
+		this.props.deleteTaskFunc(this.props.item.id);
 	};
 
 	editClicked = () => {
-		alert("What to edit?");
+		alert("Want to edit?");
 	};
 
 	render() {
