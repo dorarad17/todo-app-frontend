@@ -1,6 +1,10 @@
 import React from "react";
 
 class NewTask extends React.Component {
+	addTask = () => {
+		this.props.addTaskFunc("NEW TASK");
+	};
+
 	render() {
 		return (
 			<div className="container">
@@ -15,7 +19,7 @@ class NewTask extends React.Component {
 						</div>
 						<div className="col">
 							<button type="button" class="btn btn-success">
-								<i className="fas fa-plus"></i>
+								<i className="fas fa-plus" onClick={this.addTask}></i>
 							</button>
 						</div>
 					</form>

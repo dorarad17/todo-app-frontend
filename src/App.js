@@ -27,13 +27,28 @@ class App extends React.Component {
 		});
 	};
 
+	addTask = (taskDescription) => {
+		const taskToAdd = {
+			id: 5,
+			description: "Buy sofa",
+			completed: false
+		};
+
+		const currentTasks = this.state.tasks;
+		currentTasks.push(taskToAdd);
+
+		this.setState({
+			tasks: currentTasks
+		});
+	};
+
 	render() {
 		return (
 			<div>
 				<Title />
 				<Background />
 				<Nav />
-				<NewTask />
+				<NewTask addTaskFunc={this.addTask} />
 				<Total taskTotal={this.state.tasks.length} />
 				<TaskList
 					taskCollection={this.state.tasks}
