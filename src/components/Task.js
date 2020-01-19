@@ -11,7 +11,7 @@ class Task extends React.Component {
 
 	render() {
 		return (
-			<div classNameName="container">
+			<div className="container">
 				<div className="row item text-center">
 					<div className="col-12">
 						{this.props.item.description}

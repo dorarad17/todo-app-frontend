@@ -2,11 +2,13 @@ import React from "react";
 
 class NewTask extends React.Component {
 	state = {
-		taskDescription: "NEW TASK"
+		taskDescription: "NEW TASK",
+		placeholder: "New task here..."
 	};
 
 	addTask = () => {
 		this.props.addTaskFunc(this.state.taskDescription);
+		this.setState({ placeholder: "What else..." });
 	};
 
 	newTaskDescription = (event) => {
@@ -24,12 +26,12 @@ class NewTask extends React.Component {
 							<input
 								className="form-control mr-sm-2"
 								type="search"
-								placeholder="New task here..."
+								placeholder={this.state.placeholder}
 								onChange={this.newTaskDescription}
 							/>
 						</div>
 						<div className="col">
-							<button type="button" class="btn btn-success">
+							<button type="button" className="btn btn-success">
 								<i className="fas fa-plus" onClick={this.addTask}></i>
 							</button>
 						</div>
