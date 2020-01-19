@@ -1,8 +1,18 @@
 import React from "react";
 
 class NewTask extends React.Component {
+	state = {
+		taskDescription: "NEW TASK"
+	};
+
 	addTask = () => {
-		this.props.addTaskFunc("NEW TASK");
+		this.props.addTaskFunc(this.state.taskDescription);
+	};
+
+	newTaskDescription = (event) => {
+		this.setState({
+			taskDescription: event.target.value
+		});
 	};
 
 	render() {
@@ -15,6 +25,7 @@ class NewTask extends React.Component {
 								className="form-control mr-sm-2"
 								type="search"
 								placeholder="New task here..."
+								onChange={this.newTaskDescription}
 							/>
 						</div>
 						<div className="col">

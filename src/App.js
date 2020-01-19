@@ -30,7 +30,7 @@ class App extends React.Component {
 	addTask = (taskDescription) => {
 		const taskToAdd = {
 			id: 5,
-			description: "Buy sofa",
+			description: taskDescription,
 			completed: false
 		};
 
