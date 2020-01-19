@@ -8,13 +8,14 @@ import NewTask from "./components/NewTask";
 import Background from "./components/Background";
 import Total from "./components/Total";
 import TaskList from "./components/TaskList";
+import uuidv4 from "uuid/v4";
 
 class App extends React.Component {
 	state = {
 		tasks: [
-			{ id: 1, description: "Take meds", completed: false },
-			{ id: 2, description: "Clean kitchen", completed: false },
-			{ id: 3, description: "Cook dinner", completed: false }
+			{ id: uuidv4(), description: "Take meds", completed: false },
+			{ id: uuidv4(), description: "Clean kitchen", completed: false },
+			{ id: uuidv4(), description: "Cook dinner", completed: false }
 		]
 	};
 
@@ -29,7 +30,7 @@ class App extends React.Component {
 
 	addTask = (taskDescription) => {
 		const taskToAdd = {
-			id: 5,
+			id: uuidv4(),
 			description: taskDescription,
 			completed: false
 		};
