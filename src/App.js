@@ -13,9 +13,19 @@ import uuidv4 from "uuid/v4";
 class App extends React.Component {
 	state = {
 		tasks: [
-			{ id: uuidv4(), description: "Take meds", completed: false },
-			{ id: uuidv4(), description: "Clean kitchen", completed: false },
-			{ id: uuidv4(), description: "Cook dinner", completed: false }
+			{ id: uuidv4(), description: "Take meds", completed: false, priority: 1 },
+			{
+				id: uuidv4(),
+				description: "Clean kitchen",
+				completed: false,
+				priority: 2
+			},
+			{
+				id: uuidv4(),
+				description: "Cook dinner",
+				completed: false,
+				priority: 3
+			}
 		]
 	};
 
@@ -32,7 +42,8 @@ class App extends React.Component {
 		const taskToAdd = {
 			id: uuidv4(),
 			description: taskDescription,
-			completed: false
+			completed: false,
+			priority: 1
 		};
 
 		const currentTasks = this.state.tasks;
@@ -40,6 +51,19 @@ class App extends React.Component {
 
 		this.setState({
 			tasks: currentTasks
+		});
+	};
+
+	priorityChange = (item) => {
+		const tasks = this.state.tasks;
+		for (var task in tasks) {
+			if (task.id === item.id) {
+				task.priority = item.priority;
+			}
+		}
+
+		this.setState({
+			tasks: tasks
 		});
 	};
 
@@ -53,7 +77,8 @@ class App extends React.Component {
 				<Total taskTotal={this.state.tasks.length} />
 				<TaskList
 					taskCollection={this.state.tasks}
-					deleteTaskFunc={this.deleteTask}
+					deleteTaskNotify={this.deleteTask}
+					priorityChangeNotify={(item) => this.priorityChange(item)}
 				/>
 			</div>
 		);
