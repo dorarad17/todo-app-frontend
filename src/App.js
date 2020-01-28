@@ -67,6 +67,10 @@ class App extends React.Component {
 		});
 	};
 
+	editTask = (taskId) => {
+		alert(`EDIT ${taskId}`);
+	};
+
 	render() {
 		return (
 			<div>
@@ -79,6 +83,7 @@ class App extends React.Component {
 					taskCollection={this.state.tasks}
 					deleteTaskNotify={this.deleteTask}
 					priorityChangeNotify={(item) => this.priorityChange(item)}
+					editTaskNotify={this.editTask}
 				/>
 			</div>
 		);

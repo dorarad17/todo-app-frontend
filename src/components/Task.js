@@ -13,7 +13,7 @@ class Task extends React.Component {
 	};
 
 	editClicked = () => {
-		alert(`Want to edit task ${this.props.item.id}?`);
+		this.props.editTaskNotify(this.props.item.id);
 	};
 
 	priorityClicked = () => {
