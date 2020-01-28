@@ -1,13 +1,6 @@
 import React from "react";
 
 class Task extends React.Component {
-	// constructor(props) {
-	// 	super();
-	// 	this.props = props;
-	// 	this.state = {
-	// 		item: props.item
-	// 	};
-	// }
 	deleteClicked = () => {
 		this.props.deleteTaskNotify(this.props.item.id);
 	};
@@ -15,23 +8,6 @@ class Task extends React.Component {
 	editClicked = () => {
 		this.props.editTaskNotify(this.props.item.id);
 	};
-
-	// priorityClicked = () => {
-	// 	// look at your current priority and decrease by 1
-	// 	var newPriority = this.state.item.priority + 1;
-
-	// 	//edge cases what happens at 0
-	// 	if (newPriority === 4) {
-	// 		newPriority = 1;
-	// 	}
-
-	// 	//todo
-	// 	let updatedItem = this.state.item;
-	// 	updatedItem.priority = newPriority;
-	// 	this.setState({ item: updatedItem });
-
-	// 	this.props.priorityChangeNotify(updatedItem);
-	// };
 
 	priorityClicked = () => {
 		this.props.priorityChangeNotify(this.props.item.id);
