@@ -13,7 +13,7 @@ import uuidv4 from "uuid/v4";
 class App extends React.Component {
 	state = {
 		tasks: [
-			{ id: uuidv4(), description: "Take meds", completed: false, priority: 1 },
+			{ id: uuidv4(), description: "Take meds", completed: false, priority: 2 },
 			{
 				id: uuidv4(),
 				description: "Clean kitchen",
@@ -54,16 +54,25 @@ class App extends React.Component {
 		});
 	};
 
-	priorityChange = (item) => {
-		const tasks = this.state.tasks;
-		for (var task in tasks) {
-			if (task.id === item.id) {
-				task.priority = item.priority;
+	priorityChange = (taskId) => {
+		const updatedTasks = this.state.tasks;
+		for (let i = 0; i < updatedTasks.length; i++) {
+			const task = updatedTasks[i];
+
+			if (task.id === taskId) {
+				// look at your current priority and increase by 1
+				var newPriority = task.priority + 1;
+				//edge cases what happens at 0
+				if (newPriority === 4) {
+					newPriority = 1;
+				}
+				task.priority = newPriority;
+				break;
 			}
 		}
 
 		this.setState({
-			tasks: tasks
+			tasks: updatedTasks
 		});
 	};
 
@@ -92,7 +101,7 @@ class App extends React.Component {
 				<TaskList
 					taskCollection={this.state.tasks}
 					deleteTaskNotify={this.deleteTask}
-					priorityChangeNotify={(item) => this.priorityChange(item)}
+					priorityChangeNotify={this.priorityChange}
 					editTaskNotify={this.editTask}
 				/>
 			</div>

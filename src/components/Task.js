@@ -1,13 +1,13 @@
 import React from "react";
 
 class Task extends React.Component {
-	constructor(props) {
-		super();
-		this.props = props;
-		this.state = {
-			item: props.item
-		};
-	}
+	// constructor(props) {
+	// 	super();
+	// 	this.props = props;
+	// 	this.state = {
+	// 		item: props.item
+	// 	};
+	// }
 	deleteClicked = () => {
 		this.props.deleteTaskNotify(this.props.item.id);
 	};
@@ -16,31 +16,35 @@ class Task extends React.Component {
 		this.props.editTaskNotify(this.props.item.id);
 	};
 
+	// priorityClicked = () => {
+	// 	// look at your current priority and decrease by 1
+	// 	var newPriority = this.state.item.priority + 1;
+
+	// 	//edge cases what happens at 0
+	// 	if (newPriority === 4) {
+	// 		newPriority = 1;
+	// 	}
+
+	// 	//todo
+	// 	let updatedItem = this.state.item;
+	// 	updatedItem.priority = newPriority;
+	// 	this.setState({ item: updatedItem });
+
+	// 	this.props.priorityChangeNotify(updatedItem);
+	// };
+
 	priorityClicked = () => {
-		// look at your current priority and decrease by 1
-		var newPriority = this.state.item.priority + 1;
-
-		//edge cases what happens at 0
-		if (newPriority === 4) {
-			newPriority = 1;
-		}
-
-		//todo
-		let updatedItem = this.state.item;
-		updatedItem.priority = newPriority;
-		this.setState({ item: updatedItem });
-
-		this.props.priorityChangeNotify(updatedItem);
+		this.props.priorityChangeNotify(this.props.item.id);
 	};
 
 	render() {
 		var priority = "High";
 		var priorityClass = "btn btn-space btn-danger";
 
-		if (this.state.item.priority === 2) {
+		if (this.props.item.priority === 2) {
 			priority = "Medium";
 			priorityClass = "btn btn-space btn-warning";
-		} else if (this.state.item.priority === 3) {
+		} else if (this.props.item.priority === 3) {
 			priority = "Low";
 			priorityClass = "btn btn-space btn-success";
 		}
