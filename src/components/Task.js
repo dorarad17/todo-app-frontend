@@ -34,14 +34,14 @@ class Task extends React.Component {
 	};
 
 	render() {
-		var priority = "H";
+		var priority = "High";
 		var priorityClass = "btn btn-space btn-danger";
 
 		if (this.state.item.priority === 2) {
-			priority = "M";
+			priority = "Medium";
 			priorityClass = "btn btn-space btn-warning";
 		} else if (this.state.item.priority === 3) {
-			priority = "L";
+			priority = "Low";
 			priorityClass = "btn btn-space btn-success";
 		}
 
