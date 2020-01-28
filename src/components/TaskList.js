@@ -9,7 +9,7 @@ class TaskList extends React.Component {
 					<Task
 						key={taskItem.id}
 						item={taskItem}
-						deleteTaskNotify={this.props.deleteTaskFunc}
+						deleteTaskNotify={this.props.deleteTaskNotify}
 						priorityChangeNotify={(item) =>
 							this.props.priorityChangeNotify(item)
 						}
