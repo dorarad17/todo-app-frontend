@@ -18,7 +18,7 @@ class Task extends React.Component {
 		var priorityClass = "btn btn-space btn-danger";
 
 		if (this.props.item.priority === 2) {
-			priority = "Medium";
+			priority = "Med";
 			priorityClass = "btn btn-space btn-warning";
 		} else if (this.props.item.priority === 3) {
 			priority = "Low";
@@ -28,37 +28,35 @@ class Task extends React.Component {
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="col-lg-12">
-						<div className="card-columns item">
-							<div className="card text-center">
-								<div className="card-body">
-									<p className="card-text">{this.props.item.description}</p>
-									<p className="card-text">
-										<small class="text-muted">
-											<button
-												type="button"
-												className="btn btn-space btn-danger"
-												onClick={this.deleteClicked}
-											>
-												<i className="far fa-trash-alt"></i>
-											</button>
-											<button
-												type="button"
-												className="btn btn-space btn-warning"
-												onClick={this.editClicked}
-											>
-												<i className="fas fa-pencil-alt"></i>
-											</button>
-											<button
-												type="button"
-												className={priorityClass}
-												onClick={this.priorityClicked}
-											>
-												{priority}
-											</button>
-										</small>
-									</p>
-								</div>
+					<div className="col-lg-6">
+						<div className="card text-center item">
+							<div className="card-body">
+								<p className="card-text">{this.props.item.description}</p>
+								<p className="card-text">
+									<small class="text-muted">
+										<button
+											type="button"
+											className="btn btn-space btn-danger"
+											onClick={this.deleteClicked}
+										>
+											<i className="far fa-trash-alt"></i>
+										</button>
+										<button
+											type="button"
+											className="btn btn-space btn-warning"
+											onClick={this.editClicked}
+										>
+											<i className="fas fa-pencil-alt"></i>
+										</button>
+										<button
+											type="button"
+											className={priorityClass}
+											onClick={this.priorityClicked}
+										>
+											{priority}
+										</button>
+									</small>
+								</p>
 							</div>
 						</div>
 					</div>

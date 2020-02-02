@@ -63,3 +63,8 @@ h1 {
 	align-content: center;
 	background-color: #acb8c6;
 }
+
+.card-body {
+	justify-content: center;
+	float: center;
+}
