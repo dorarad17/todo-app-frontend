@@ -25,6 +25,19 @@ class App extends React.Component {
 				description: "Cook dinner",
 				completed: false,
 				priority: 3
+			},
+
+			{
+				id: uuidv4(),
+				description: "Other task",
+				completed: false,
+				priority: 3
+			},
+			{
+				id: uuidv4(),
+				description: "More tasks",
+				completed: false,
+				priority: 3
 			}
 		]
 	};
