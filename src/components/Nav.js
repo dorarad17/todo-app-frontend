@@ -10,7 +10,7 @@ class Nav extends React.Component {
 						<h1>To Do List</h1>
 					</a>
 
-					<div className="links">
+					<span className="navbar-text links">
 						<Link to="/" className="links">
 							Home
 						</Link>{" "}
@@ -18,7 +18,7 @@ class Nav extends React.Component {
 						<Link to="/about" className="links">
 							About
 						</Link>
-					</div>
+					</span>
 				</nav>
 			</div>
 		);
