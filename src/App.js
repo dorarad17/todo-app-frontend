@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
 import Nav from "./components/Nav";
@@ -8,6 +8,7 @@ import NewTask from "./components/NewTask";
 import Background from "./components/Background";
 import Total from "./components/Total";
 import TaskList from "./components/TaskList";
+import About from "./components/pages/About";
 import uuidv4 from "uuid/v4";
 
 class App extends React.Component {
@@ -105,19 +106,30 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Title />
-				<Background />
-				<Nav />
-				<NewTask addTaskFunc={this.addTask} />
-				<Total taskTotal={this.state.tasks.length} />
-				<TaskList
-					taskCollection={this.state.tasks}
-					deleteTaskNotify={this.deleteTask}
-					priorityChangeNotify={this.priorityChange}
-					editTaskNotify={this.editTask}
-				/>
-			</div>
+			<Router>
+				<div>
+					<Title />
+					<Background />
+					<Nav />
+					<Route
+						exact
+						path="/"
+						render={(props) => (
+							<React.Fragment>
+								<NewTask addTaskFunc={this.addTask} />
+								<Total taskTotal={this.state.tasks.length} />
+								<TaskList
+									taskCollection={this.state.tasks}
+									deleteTaskNotify={this.deleteTask}
+									priorityChangeNotify={this.priorityChange}
+									editTaskNotify={this.editTask}
+								/>
+							</React.Fragment>
+						)}
+					/>
+					<Route path="/about" component={About} />
+				</div>
+			</Router>
 		);
 	}
 }

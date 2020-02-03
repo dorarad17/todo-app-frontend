@@ -63,3 +63,11 @@ h1 {
 	align-content: center;
 	background-color: #acb8c6;
 }
+
+.links {
+	color: #f9b87f;
+}
+
+#about {
+	padding-top: 80px;
+}
