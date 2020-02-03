@@ -10,7 +10,7 @@ class Nav extends React.Component {
 						<h1>To Do List</h1>
 					</a>
 
-					<span className="navbar-text links">
+					<span className="links">
 						<Link to="/" className="links">
 							Home
 						</Link>{" "}
