@@ -5,7 +5,7 @@ class Nav extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<nav className="navbar fixed-top navbar-expand-md">
+				<nav className="navbar fixed-top justify-content-between">
 					<a className="navbar-brand" href="">
 						<h1>To Do List</h1>
 					</a>
