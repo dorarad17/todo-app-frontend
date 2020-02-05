@@ -90,24 +90,26 @@ class App extends React.Component {
 		});
 	};
 
-	editTask = (taskId) => {
+	editTask = (taskId, description) => {
 		// find task which needs to be updated
-		const tasks = this.state.tasks;
+		const tasks = [...this.state.tasks]; // = [...] spread syntax
 		for (let i = 0; i < tasks.length; i++) {
 			const task = tasks[i];
 
 			if (task.id === taskId) {
-				alert(`edit ${task.id}`);
+				task.description = description;
 			}
 		}
-
 		// update state
+		this.setState({
+			tasks: tasks
+		});
 	};
 
 	render() {
 		return (
 			<Router>
-				<div>
+				<div className="container">
 					<Title />
 					<Background />
 					<Nav />
