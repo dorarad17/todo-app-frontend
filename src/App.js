@@ -14,7 +14,7 @@ import uuidv4 from "uuid/v4";
 class App extends React.Component {
 	state = {
 		tasks: [
-			{ id: uuidv4(), description: "Take meds", completed: false, priority: 2 },
+			{ id: uuidv4(), description: "Get milk", completed: false, priority: 1 },
 			{
 				id: uuidv4(),
 				description: "Clean kitchen",
