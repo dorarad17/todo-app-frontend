@@ -5,8 +5,8 @@ function About() {
 		<React.Fragment>
 			<div id="about" className="container">
 				<p>
-					This is the TodoList app v1.0, which is part of the BBC's Step in Tech
-					course
+					This is the TodoList app v1.0.0, which is part of the BBC's Step in
+					Tech course
 				</p>
 			</div>
 		</React.Fragment>
