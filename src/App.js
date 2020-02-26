@@ -30,13 +30,13 @@ class App extends React.Component {
 
 			{
 				id: uuidv4(),
-				description: "Other task",
+				description: "Pick up shopping",
 				completed: false,
 				priority: 3
 			},
 			{
 				id: uuidv4(),
-				description: "More tasks",
+				description: "Finish homework",
 				completed: false,
 				priority: 3
 			}
