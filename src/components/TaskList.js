@@ -13,6 +13,7 @@ class TaskList extends React.Component {
 							deleteTaskNotify={this.props.deleteTaskNotify}
 							priorityChangeNotify={this.props.priorityChangeNotify}
 							editTaskNotify={this.props.editTaskNotify}
+							completedNotify={this.props.completedNotify}
 						/>
 					))}
 				</div>

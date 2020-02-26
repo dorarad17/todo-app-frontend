@@ -3,7 +3,8 @@ import React from "react";
 class Task extends React.Component {
 	state = {
 		isEditing: false,
-		description: this.props.item.description
+		description: this.props.item.description,
+		completed: this.props.item.completed
 	};
 
 	deleteClicked = () => {
@@ -15,6 +16,13 @@ class Task extends React.Component {
 			isEditing: !this.state.isEditing
 		});
 		this.props.editTaskNotify(this.props.item.id, this.state.description);
+	};
+
+	completeClicked = () => {
+		this.setState({
+			completed: !this.state.completed
+		});
+		this.props.completedNotify(this.props.item.id, this.state.completed);
 	};
 
 	handleChange = (event) => {
@@ -66,7 +74,13 @@ class Task extends React.Component {
 									/>
 								</form>
 							) : (
-								<p className="card-text">{this.props.item.description}</p>
+								<p className="card-text">
+									{this.state.completed ? (
+										<strike>{this.props.item.description}</strike>
+									) : (
+										<p>{this.props.item.description}</p>
+									)}
+								</p>
 							)}
 							<p className="card-text">
 								<small class="text-muted">
@@ -90,6 +104,13 @@ class Task extends React.Component {
 										onClick={this.priorityClicked}
 									>
 										{priority}
+									</button>
+									<button
+										type="button"
+										className="btn btn-space btn-dark"
+										onClick={this.completeClicked}
+									>
+										<i className="fas fa-check"></i>
 									</button>
 								</small>
 							</p>

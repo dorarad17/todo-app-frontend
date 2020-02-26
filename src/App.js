@@ -25,7 +25,7 @@ class App extends React.Component {
 				id: uuidv4(),
 				description: "Cook dinner",
 				completed: false,
-				priority: 3
+				priority: 2
 			},
 
 			{
@@ -106,6 +106,22 @@ class App extends React.Component {
 		});
 	};
 
+	completedChange = (taskId, completed) => {
+		// find task which needs to be updated
+		const tasks = [...this.state.tasks]; // = [...] spread syntax
+		for (let i = 0; i < tasks.length; i++) {
+			const task = tasks[i];
+
+			if (task.id === taskId) {
+				task.completed = completed;
+			}
+		}
+		// update state
+		this.setState({
+			tasks: tasks
+		});
+	};
+
 	render() {
 		return (
 			<Router>
@@ -125,6 +141,7 @@ class App extends React.Component {
 									deleteTaskNotify={this.deleteTask}
 									priorityChangeNotify={this.priorityChange}
 									editTaskNotify={this.editTask}
+									completedNotify={this.completedChange}
 								/>
 							</React.Fragment>
 						)}
