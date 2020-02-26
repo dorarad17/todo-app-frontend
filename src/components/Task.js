@@ -22,7 +22,7 @@ class Task extends React.Component {
 		this.setState({
 			completed: !this.state.completed
 		});
-		this.props.completedNotify(this.props.item.id, this.state.completed);
+		this.props.completedNotify(this.props.item.id, !this.state.completed);
 	};
 
 	handleChange = (event) => {
