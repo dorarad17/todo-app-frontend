@@ -18,7 +18,7 @@ class App extends React.Component {
 			{
 				id: uuidv4(),
 				description: "Clean kitchen",
-				completed: false,
+				completed: true,
 				priority: 2
 			},
 			{
