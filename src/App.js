@@ -10,6 +10,7 @@ import Total from "./components/Total";
 import TaskList from "./components/TaskList";
 import About from "./components/pages/About";
 import uuidv4 from "uuid/v4";
+import axios from "axios";
 
 class App extends React.Component {
 	state = {
@@ -18,7 +19,18 @@ class App extends React.Component {
 
 	// component life cycle method
 	componentDidMount = () => {
-		console.log("app loaded");
+		axios
+			.get("https://2oez8h7do2.execute-api.eu-west-2.amazonaws.com/dev/tasks/")
+			.then((response) => {
+				// handle success
+				this.setState({
+					tasks: response.data.tasks
+				});
+			})
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	deleteTask = (taskId) => {
