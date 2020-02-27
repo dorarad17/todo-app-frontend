@@ -13,34 +13,12 @@ import uuidv4 from "uuid/v4";
 
 class App extends React.Component {
 	state = {
-		tasks: [
-			{ id: uuidv4(), description: "Get milk", completed: false, priority: 1 },
-			{
-				id: uuidv4(),
-				description: "Clean kitchen",
-				completed: true,
-				priority: 2
-			},
-			{
-				id: uuidv4(),
-				description: "Cook dinner",
-				completed: false,
-				priority: 2
-			},
+		tasks: []
+	};
 
-			{
-				id: uuidv4(),
-				description: "Pick up shopping",
-				completed: false,
-				priority: 3
-			},
-			{
-				id: uuidv4(),
-				description: "Finish homework",
-				completed: false,
-				priority: 3
-			}
-		]
+	// component life cycle method
+	componentDidMount = () => {
+		console.log("app loaded");
 	};
 
 	deleteTask = (taskId) => {
