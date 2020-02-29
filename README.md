@@ -14,9 +14,8 @@ This project uses the following technology:
 
 - ReactJS
 - JavaScript (ES2015+)
-- CSS
+- HTML/CSS
 - Bootstrap
-- Webpack
 - Axios
 - ESLint
 
