@@ -1,6 +1,8 @@
 # My Todo List - Frontend
 
-This is the front end of My Todo List application, built throughout the [BBC's Step into Tech course](https://www.youtube.com/watch?v=iH5zl6iQYoo) with [Tech Returners](https://techreturners.com). It integrates with a backend, available [here](https://github.com/your-backend-repo).
+This is the front end of My Todo List application, built throughout the [BBC's Step into Tech course](https://www.youtube.com/watch?v=iH5zl6iQYoo) with [Tech Returners](https://techreturners.com). 
+
+It integrates with a backend, available [here](https://github.com/dorarad17/todo-app-backend).
 
 The hosted version of the application is available here: [https://github.com/whatever-link-here](https://github.com/whatever-link-here).
 
@@ -18,7 +20,7 @@ This project uses the following technology:
 - Axios
 - ESLint
 
-Key features include adding/deleting tasks, in-line edit of descriptions, ability to label tasks by priority (high, medium, low) and to mark tasks as complete. 
+Key features include adding/deleting tasks, in-line edit of descriptions, ability to label tasks by priority (high, medium, low) and marking tasks as complete. 
 
 It has been designed and built with mobile-first reponsive principles in mind. 
 
