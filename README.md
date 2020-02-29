@@ -1,8 +1,10 @@
-# Todo Application - Frontend
+# My Todo List - Frontend
 
-This is the front end of a Todo Application, built throughout the [Tech Returners](https://techreturners.com) Your Journey Into Tech course. It integrates with a backend, available [here](https://github.com/your-backend-repo).
+This is the front end of My Todo List application, built throughout the [Tech Returners](https://techreturners.com) Step into Tech course with [BBC] (https://www.youtube.com/watch?v=iH5zl6iQYoo). It integrates with a backend, available [here](https://github.com/your-backend-repo).
 
 The hosted version of the application is available here: [https://github.com/whatever-link-here](https://github.com/whatever-link-here).
+
+![app_screenshot](images/todo_list_app.jpeg)
 
 ### Technology Used
 
@@ -11,13 +13,19 @@ This project uses the following technology:
 - ReactJS
 - JavaScript (ES2015+)
 - CSS
+- Bootstrap
 - Webpack
 - Axios
 - ESLint
 
-It has been designed and built with mobile-first reponsive principles in mind.
+It has been designed and built with mobile-first reponsive principles in mind. Key features include adding/deleting tasks, in-line edit of descriptions, ability to label tasks by priority (high, medium, low) and to mark tasks as complete. 
 
-(Maybe add photos here of different device sizes?)
+![app_mobile_screenshot](images/todo_list_mobile.jpeg)
+
+
+![app_edit_screenshot](images/todo_list_edit.jpeg)
+
+### React component structure
 
 ### Running the application locally
 
