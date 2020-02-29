@@ -1,6 +1,6 @@
 # My Todo List - Frontend
 
-This is the front end of My Todo List application, built throughout the [BBC's Step into Tech course](https://www.youtube.com/watch?v=iH5zl6iQYoo) with [Tech Returners](https://techreturners.com). 
+This is the frontend of My Todo List application, built throughout the [BBC's Step into Tech course](https://www.youtube.com/watch?v=iH5zl6iQYoo) with [Tech Returners](https://techreturners.com). 
 
 It integrates with a backend, available [here](https://github.com/dorarad17/todo-app-backend).
 
