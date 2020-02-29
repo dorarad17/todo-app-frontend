@@ -1,6 +1,6 @@
 # My Todo List - Frontend
 
-This is the front end of My Todo List application, built throughout the [Tech Returners](https://techreturners.com) [Step into Tech course with the BBC](https://www.youtube.com/watch?v=iH5zl6iQYoo). It integrates with a backend, available [here](https://github.com/your-backend-repo).
+This is the front end of My Todo List application, built throughout the [BBC's Step into Tech course](https://www.youtube.com/watch?v=iH5zl6iQYoo) with [Tech Returners](https://techreturners.com). It integrates with a backend, available [here](https://github.com/your-backend-repo).
 
 The hosted version of the application is available here: [https://github.com/whatever-link-here](https://github.com/whatever-link-here).
 
@@ -24,7 +24,6 @@ It has been designed and built with mobile-first reponsive principles in mind.
 
 ![app_mobile_screenshot](images/todo_list_mobile.jpeg)
 
-### React component structure
 
 ### Running the application locally
 
