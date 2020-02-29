@@ -8,21 +8,21 @@ class Task extends React.Component {
 	};
 
 	deleteClicked = () => {
-		this.props.deleteTaskNotify(this.props.item.id);
+		this.props.deleteTaskNotify(this.props.item.taskId);
 	};
 
 	editClicked = () => {
 		this.setState({
 			isEditing: !this.state.isEditing
 		});
-		this.props.editTaskNotify(this.props.item.id, this.state.description);
+		this.props.editTaskNotify(this.props.item.taskId, this.state.description);
 	};
 
 	completeClicked = () => {
 		this.setState({
 			completed: !this.state.completed
 		});
-		this.props.completedNotify(this.props.item.id, !this.state.completed);
+		this.props.completedNotify(this.props.item.taskId, !this.state.completed);
 	};
 
 	handleChange = (event) => {
@@ -30,7 +30,7 @@ class Task extends React.Component {
 	};
 
 	priorityClicked = () => {
-		this.props.priorityChangeNotify(this.props.item.id);
+		this.props.priorityChangeNotify(this.props.item.taskId);
 	};
 
 	getStyle = () => {
@@ -78,12 +78,12 @@ class Task extends React.Component {
 									{this.state.completed ? (
 										<strike>{this.props.item.description}</strike>
 									) : (
-										<p>{this.props.item.description}</p>
+										<span>{this.props.item.description}</span>
 									)}
 								</p>
 							)}
 							<p className="card-text">
-								<small class="text-muted">
+								<small className="text-muted">
 									<button
 										type="button"
 										className="btn btn-space btn-danger"

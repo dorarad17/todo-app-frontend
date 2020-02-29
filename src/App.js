@@ -36,7 +36,7 @@ class App extends React.Component {
 	deleteTask = (taskId) => {
 		// Tasks will be deleted
 		const tasks = this.state.tasks;
-		const updatedTasks = tasks.filter((item) => item.id !== taskId);
+		const updatedTasks = tasks.filter((item) => item.taskId !== taskId);
 		this.setState({
 			tasks: updatedTasks
 		});
@@ -44,7 +44,7 @@ class App extends React.Component {
 
 	addTask = (taskDescription) => {
 		const taskToAdd = {
-			id: uuidv4(),
+			taskId: uuidv4(),
 			description: taskDescription,
 			completed: false,
 			priority: 1
@@ -63,7 +63,7 @@ class App extends React.Component {
 		for (let i = 0; i < updatedTasks.length; i++) {
 			const task = updatedTasks[i];
 
-			if (task.id === taskId) {
+			if (task.taskId === taskId) {
 				// look at your current priority and increase by 1
 				var newPriority = task.priority + 1;
 				//edge cases what happens at 0
@@ -86,7 +86,7 @@ class App extends React.Component {
 		for (let i = 0; i < tasks.length; i++) {
 			const task = tasks[i];
 
-			if (task.id === taskId) {
+			if (task.taskId === taskId) {
 				task.description = description;
 			}
 		}
@@ -102,7 +102,7 @@ class App extends React.Component {
 		for (let i = 0; i < tasks.length; i++) {
 			const task = tasks[i];
 
-			if (task.id === taskId) {
+			if (task.taskId === taskId) {
 				task.completed = completed;
 			}
 		}

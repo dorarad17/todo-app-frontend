@@ -8,7 +8,7 @@ class TaskList extends React.Component {
 				<div className="row">
 					{this.props.taskCollection.map((taskItem) => (
 						<Task
-							key={taskItem.id}
+							key={taskItem.taskId}
 							item={taskItem}
 							deleteTaskNotify={this.props.deleteTaskNotify}
 							priorityChangeNotify={this.props.priorityChangeNotify}
