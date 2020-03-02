@@ -9,7 +9,6 @@ import Background from "./components/Background";
 import Total from "./components/Total";
 import TaskList from "./components/TaskList";
 import About from "./components/pages/About";
-import uuidv4 from "uuid/v4";
 import axios from "axios";
 
 class App extends React.Component {
@@ -44,18 +43,35 @@ class App extends React.Component {
 
 	addTask = (taskDescription) => {
 		const taskToAdd = {
-			taskId: uuidv4(),
 			description: taskDescription,
-			completed: false,
-			priority: 1
+			completed: 0,
+			userId: 364,
+			priority: 3
 		};
 
-		const currentTasks = this.state.tasks;
-		currentTasks.push(taskToAdd);
+		axios
+			.post(
+				"https://2oez8h7do2.execute-api.eu-west-2.amazonaws.com/dev/tasks/",
+				taskToAdd
+			)
+			.then((response) => {
+				// handle success
+				taskToAdd.taskId = response.data.tasks.taskId;
+				console.log(taskToAdd);
 
-		this.setState({
-			tasks: currentTasks
-		});
+				// push new task to array
+				const currentTasks = this.state.tasks;
+				currentTasks.push(taskToAdd);
+
+				// update state
+				this.setState({
+					tasks: currentTasks
+				});
+			})
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	priorityChange = (taskId) => {
