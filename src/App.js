@@ -123,34 +123,64 @@ class App extends React.Component {
 
 	editTask = (taskId, description) => {
 		// find task which needs to be updated
-		const tasks = [...this.state.tasks]; // = [...] spread syntax
-		for (let i = 0; i < tasks.length; i++) {
-			const task = tasks[i];
+		const updatedTasks = [...this.state.tasks]; // = [...] spread syntax
+		for (let i = 0; i < updatedTasks.length; i++) {
+			const task = updatedTasks[i];
 
 			if (task.taskId === taskId) {
 				task.description = description;
 			}
 		}
-		// update state
-		this.setState({
-			tasks: tasks
-		});
+		const taskToEdit = updatedTasks.find((task) => task.taskId === taskId);
+
+		axios
+			.put(
+				`https://2oez8h7do2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`,
+				taskToEdit
+			)
+			.then((response) => {
+				// handle success
+
+				// update state
+				this.setState({
+					tasks: updatedTasks
+				});
+			})
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	completedChange = (taskId, completed) => {
 		// find task which needs to be updated
-		const tasks = [...this.state.tasks]; // = [...] spread syntax
-		for (let i = 0; i < tasks.length; i++) {
-			const task = tasks[i];
+		const updatedTasks = [...this.state.tasks]; // = [...] spread syntax
+		for (let i = 0; i < updatedTasks.length; i++) {
+			const task = updatedTasks[i];
 
 			if (task.taskId === taskId) {
 				task.completed = completed;
 			}
 		}
-		// update state
-		this.setState({
-			tasks: tasks
-		});
+		const taskToEdit = updatedTasks.find((task) => task.taskId === taskId);
+
+		axios
+			.put(
+				`https://2oez8h7do2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`,
+				taskToEdit
+			)
+			.then((response) => {
+				// handle success
+
+				// update state
+				this.setState({
+					tasks: updatedTasks
+				});
+			})
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	render() {
