@@ -99,13 +99,26 @@ class App extends React.Component {
 					newPriority = 1;
 				}
 				task.priority = newPriority;
-				break;
 			}
 		}
+		const taskToEdit = updatedTasks.find((task) => task.taskId === taskId);
 
-		this.setState({
-			tasks: updatedTasks
-		});
+		axios
+			.put(
+				`https://2oez8h7do2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`,
+				taskToEdit
+			)
+			.then((response) => {
+				// handle success
+
+				this.setState({
+					tasks: updatedTasks
+				});
+			})
+			.catch(function(error) {
+				// handle error
+				console.error(error);
+			});
 	};
 
 	editTask = (taskId, description) => {
