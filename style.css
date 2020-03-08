@@ -1,0 +1,73 @@
+body {
+	padding-top: 60px;
+}
+
+.navbar {
+	background-color: #4d76a9;
+	display: flex;
+	justify-content: space-between;
+}
+
+h1 {
+	color: #f9b87f;
+	font-size: 42px;
+	letter-spacing: -2px;
+	text-align: left;
+}
+
+#total {
+	padding: 10px;
+	font-size: 42px;
+	letter-spacing: -2px;
+	color: #343c3f;
+	background-color: #4d76a9;
+}
+
+#newTask {
+	padding-top: 50px;
+	margin-bottom: 30px;
+	align-items: center;
+}
+
+#number {
+	color: #f9b87f;
+	padding: 20px 40px 20px 40px;
+	font-size: 60px;
+}
+
+#add {
+	background-color: #b5f587;
+}
+
+.edit {
+	background-color: #fad541;
+}
+
+.delete {
+	background-color: #f77e90;
+}
+
+.btn-space {
+	margin-left: 10px;
+}
+
+#input {
+	font-family: courier, monospace;
+}
+
+.item {
+	color: #555;
+	font-size: 30px;
+	margin: 30px;
+	font-family: courier, monospace;
+	align-content: center;
+	background-color: #acb8c6;
+}
+
+.links {
+	color: #f9b87f;
+}
+
+#about {
+	padding-top: 80px;
+}
