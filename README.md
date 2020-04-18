@@ -4,7 +4,7 @@ This is the frontend of My Todo List application, built throughout the [BBC's St
 
 It integrates with a backend, available [here](https://github.com/dorarad17/todo-app-backend).
 
-The hosted version of the application is available here: [https://github.com/whatever-link-here](https://github.com/whatever-link-here).
+The hosted version of the application is available here: [https://dorarad17.github.io/todo-app-frontend/](https://dorarad17.github.io/todo-app-frontend/).
 
 ![app_screenshot](images/todo_list_app.jpeg)
 
