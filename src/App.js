@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom";
 import "./App.css";
 
 import Nav from "./components/Nav";
@@ -13,7 +13,7 @@ import axios from "axios";
 
 class App extends React.Component {
 	state = {
-		tasks: []
+		tasks: [],
 	};
 
 	// component life cycle method
@@ -23,10 +23,10 @@ class App extends React.Component {
 			.then((response) => {
 				// handle success
 				this.setState({
-					tasks: response.data.tasks
+					tasks: response.data.tasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -44,10 +44,10 @@ class App extends React.Component {
 				const tasks = this.state.tasks;
 				const updatedTasks = tasks.filter((item) => item.taskId !== taskId);
 				this.setState({
-					tasks: updatedTasks
+					tasks: updatedTasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -58,7 +58,7 @@ class App extends React.Component {
 			description: taskDescription,
 			completed: 0,
 			userId: 364,
-			priority: 3
+			priority: 3,
 		};
 
 		axios
@@ -77,10 +77,10 @@ class App extends React.Component {
 
 				// update state
 				this.setState({
-					tasks: currentTasks
+					tasks: currentTasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -112,10 +112,10 @@ class App extends React.Component {
 				// handle success
 
 				this.setState({
-					tasks: updatedTasks
+					tasks: updatedTasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -143,10 +143,10 @@ class App extends React.Component {
 
 				// update state
 				this.setState({
-					tasks: updatedTasks
+					tasks: updatedTasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -174,10 +174,10 @@ class App extends React.Component {
 
 				// update state
 				this.setState({
-					tasks: updatedTasks
+					tasks: updatedTasks,
 				});
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				// handle error
 				console.error(error);
 			});
@@ -185,7 +185,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<Router>
+			<HashRouter>
 				<div className="container">
 					<Title />
 					<Background />
@@ -209,7 +209,7 @@ class App extends React.Component {
 					/>
 					<Route path="/about" component={About} />
 				</div>
-			</Router>
+			</HashRouter>
 		);
 	}
 }
