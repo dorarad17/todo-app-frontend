@@ -11,7 +11,7 @@ class Nav extends React.Component {
 					</a>
 
 					<span className="links justify-content-end">
-						<Link to="/" className="links">
+						<Link to="/home" className="links">
 							Home
 						</Link>{" "}
 						|{" "}

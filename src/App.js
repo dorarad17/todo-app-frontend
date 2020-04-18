@@ -192,7 +192,7 @@ class App extends React.Component {
 					<Nav />
 					<Route
 						exact
-						path="/"
+						path="/home"
 						render={(props) => (
 							<React.Fragment>
 								<NewTask addTaskFunc={this.addTask} />
